@@ -9,13 +9,18 @@ app = Flask(  # Create a flask app
 
 # Your code should be below
 @app.route("/")
-def my_shop():
+def home():
     return render_template("home.html")
 
-@app.route ("/product")
-def my_shop2():
+@app.route("/product")
+def product():
     return render_template("product.html")
-            
+
+@app.route("/cart")
+def cart():
+    return render_template("cart.html")
+
+
 # Your code should be above
 
 if __name__ == "__main__":  # Makes sure this is the main process
